@@ -20,7 +20,33 @@
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <img src="/assets/Gitfav-logo.svg" alt="Logo GitFav" />
+        <div class="input-wrapper">
+          <label for=""></label>
+          <input type="text" id="username" />
+          <button><i class="ph-bold ph-star"></i>FAVORITE</button>
+        </div>
+      </header>
+      <main>
+        <table>
+          <thead>
+            <tr>
+              <th><i class="ph-bold ph-user"></i> User</th>
+              <th><i class="ph-bold ph-book-bookmark"></i> Repositories</th>
+              <th><i class="ph-bold ph-users-three"></i> Followers</th>
+              <th><i class="ph-bold ph-lightning"></i> Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="no-fav hide">
+          <img src="/assets/star.svg" alt="" />
+          <p>Nenhum favorito ainda</p>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

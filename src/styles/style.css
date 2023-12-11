@@ -1,0 +1,232 @@
+:root {
+  --bg-color: #000;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkt-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+}
+header .input-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 64rem;
+  width: 100%;
+}
+header .input-wrapper input {
+  width: 100%;
+  border-radius: 5px;
+  background: #06181c;
+  padding: 1rem 1.6rem;
+  border: none;
+  outline: none;
+  color: #7c7c8a;
+  font-size: 1.6rem;
+}
+header .input-wrapper button {
+  margin-left: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 5px;
+  background: #065e7c;
+  border: none;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+header .input-wrapper button:hover {
+  background: #fff;
+  color: #065e7c;
+}
+@media screen and (min-width: 768px) {
+  header {
+    gap: 20rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+main {
+  width: 100%;
+  margin-top: 8.7rem;
+  border: 1px solid #4a808c;
+  border-radius: 1.4rem;
+}
+
+table {
+  border-spacing: 0;
+  overflow: hidden;
+  text-align: left;
+}
+table * {
+  font-size: clamp(1rem, 0.507rem + 1.3146vw, 2.4rem);
+  color: #fff;
+}
+table tbody {
+  display: block;
+  max-height: 38rem;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  border-radius: 1.4rem;
+}
+table th {
+  width: 100%;
+  background: #092d38;
+  font-weight: normal;
+  padding: 1.4rem 0;
+}
+table th:first-child {
+  border-top-left-radius: 1.4rem;
+  padding-left: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  table th:first-child {
+    padding: 2.4rem;
+  }
+}
+table th:last-child {
+  border-top-right-radius: 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  table th {
+    padding: 2.4rem;
+  }
+}
+table tr {
+  background: #06181c;
+}
+table tr:last-child {
+  border-bottom-left-radius: 1.4rem;
+  border-bottom-right-radius: 1.4rem;
+}
+table tr:nth-child(odd) {
+  background: rgba(6, 22, 27, 0.5);
+}
+table tr:nth-child(even) {
+  border-top: 1px solid #4a808c;
+  border-bottom: 1px solid #4a808c;
+}
+table tr td {
+  padding: 1.4rem;
+}
+table tr td.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+table tr td.user a {
+  text-decoration: none;
+}
+table tr td.user a span {
+  color: #e1e1e6;
+}
+table tr td.user a p {
+  font-weight: bold;
+}
+table tr td.user img {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+  table tr td.user {
+    flex-direction: row;
+  }
+  table tr td.user a {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  table tr td {
+    flex-direction: row;
+    padding: 2.4rem;
+  }
+}
+table .btn-remove {
+  text-align: center;
+}
+table .btn-remove button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+tbody::-webkit-scrollbar-track {
+  border: 4px solid transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: #4a808c;
+  border-radius: 1rem;
+}
+
+.no-fav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 5rem;
+}
+.no-fav img {
+  max-width: 13.2rem;
+  max-height: 12.5rem;
+}
+.no-fav p {
+  font-size: clamp(1.6rem, 0.3919rem + 3.2215vw, 4rem);
+  color: #4e5455;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .no-fav {
+    flex-direction: row;
+    justify-content: center;
+    padding: 18rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+#app {
+  max-width: 112rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 1.4rem;
+}/*# sourceMappingURL=style.css.map */

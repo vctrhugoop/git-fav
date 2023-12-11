@@ -1,0 +1,136 @@
+main {
+  width: 100%;
+  margin-top: 8.7rem;
+  border: 1px solid #4a808c;
+  border-radius: 1.4rem;
+}
+
+table {
+  border-spacing: 0;
+  overflow: hidden;
+  text-align: left;
+
+  * {
+    font-size: clamp(1rem, 0.507rem + 1.3146vw, 2.4rem);
+    color: #fff;
+  }
+
+  tbody {
+    display: block;
+    max-height: 38rem;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    border-radius: 1.4rem;
+  }
+  th {
+    width: 100%;
+    background: #092d38;
+    font-weight: normal;
+    padding: 1.4rem 0;
+
+    &:first-child {
+      border-top-left-radius: 1.4rem;
+      padding-left: 1.4rem;
+
+      @media screen and (min-width: 768px) {
+        padding: 2.4rem;
+      }
+    }
+
+    &:last-child {
+      border-top-right-radius: 1.4rem;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 2.4rem;
+    }
+  }
+
+  tr {
+    background: #06181c;
+
+    &:last-child {
+      border-bottom-left-radius: 1.4rem;
+      border-bottom-right-radius: 1.4rem;
+    }
+
+    &:nth-child(odd) {
+      background: rgba(6, 22, 27, 0.5);
+    }
+    &:nth-child(even) {
+      border-top: 1px solid #4a808c;
+      border-bottom: 1px solid #4a808c;
+    }
+    td {
+      padding: 1.4rem;
+
+      &.user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+
+          span {
+            color: #e1e1e6;
+          }
+        }
+
+        a p {
+          font-weight: bold;
+        }
+
+        img {
+          width: 5rem;
+          height: 5rem;
+
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        @media screen and (min-width: 768px) {
+          flex-direction: row;
+
+          a {
+            text-align: left;
+          }
+        }
+      }
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+        padding: 2.4rem;
+      }
+    }
+  }
+  .btn-remove {
+    text-align: center;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+tbody::-webkit-scrollbar-track {
+  border: 4px solid transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background-color: #4a808c;
+  border-radius: 1rem;
+}

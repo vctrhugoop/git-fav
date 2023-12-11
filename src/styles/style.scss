@@ -1,0 +1,12 @@
+@use 'base';
+@use 'header';
+@use 'table';
+@use 'noFav';
+
+#app {
+  max-width: 112rem;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 5rem 1.4rem;
+}
