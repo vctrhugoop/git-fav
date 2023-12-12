@@ -19,20 +19,36 @@ export class Favorites {
       const userExists = this.entries.find(entry => entry.login === username);
 
       if (userExists) {
-        throw new Error('Usuário já cadastrado!');
+        throw new Error('User already added to favorites!');
       }
 
       const user = await GithubUser.search(username);
 
       if (user.login === undefined) {
-        throw new Error('Usuário não encontrado!');
+        throw new Error('User not found!');
       }
 
       this.entries = [user, ...this.entries];
       this.update();
       this.save();
+
+      Toastify({
+        text: 'User added to favorites!',
+        duration: 3000,
+        close: true,
+        style: {
+          background: 'linear-gradient(to right, #00b09b, #96c93d)',
+        },
+      }).showToast();
     } catch (error) {
-      alert(error.message);
+      Toastify({
+        text: error.message,
+        duration: 3000,
+        close: true,
+        style: {
+          background: 'linear-gradient(to right,#fdc22d, #cbbf05)',
+        },
+      }).showToast();
     }
 
     this.root.querySelector('.input-wrapper input').value = '';
@@ -42,10 +58,22 @@ export class Favorites {
     const filteredEntries = this.entries.filter(
       entry => entry.login !== user.login
     );
+
     this.entries = filteredEntries;
 
     this.update();
+
     this.save();
+
+    Toastify({
+      text: 'User removed from favorites!',
+      duration: 3000,
+      close: true,
+      style: {
+        background: 'linear-gradient(to right, #e62121, #fd9e2d)',
+        color: '#FFF',
+      },
+    }).showToast();
   }
 }
 
@@ -92,7 +120,7 @@ export class FavoritesView extends Favorites {
       row.querySelector('.followers').textContent = user.followers;
 
       row.querySelector('.btn-remove').onclick = () => {
-        const isOk = confirm('Tem certeza que deseja deletar essa linha?');
+        const isOk = confirm('Are you sure you want to remove this user?');
 
         if (isOk) {
           this.delete(user);
