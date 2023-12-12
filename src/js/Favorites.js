@@ -71,7 +71,6 @@ export class Favorites {
       close: true,
       style: {
         background: 'linear-gradient(to right, #e62121, #fd9e2d)',
-        color: '#FFF',
       },
     }).showToast();
   }
@@ -88,13 +87,19 @@ export class FavoritesView extends Favorites {
   }
 
   onadd() {
+    const input = document.querySelector('.input-wrapper input');
     const addButton = document.querySelector('.input-wrapper button');
 
     addButton.onclick = () => {
-      const { value } = this.root.querySelector('.input-wrapper input');
-
-      this.add(value);
+      this.add(input.value);
     };
+
+    input.addEventListener('keypress', event => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        addButton.click();
+      }
+    });
   }
 
   update() {
