@@ -24,7 +24,7 @@ Projeto desenvolvido para o desafio do módulo 6 do curso [Explorer da Rocketsea
 
 #### Principais Features
 
-- **Adiçãoe exclusão de dados** : Podendo adicionar ou remover usuários.
+- **Adição e exclusão de dados** : Podendo adicionar ou remover usuários.
 - **Verificações**: Usuários já adicionados ou Usuários não encontrados.
 - **Toasts messages**: Notificações para o usuário identificar erros ou sucesso na aplicação tals como, usuário já existente, usuário não encontrado, usuário adicionado e removido.
 
