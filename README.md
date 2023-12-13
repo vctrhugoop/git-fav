@@ -42,6 +42,7 @@ Projeto desenvolvido para o desafio do módulo 6 do curso [Explorer da Rocketsea
 - [Google Fonts](https://fonts.google.com/)
 - [Phosphor Icons](https://phosphoricons.com/)
 - [Toastify JS](https://apvarun.github.io/toastify-js/)
+- [LordIcon](https://lordicon.com/)
 
 ## 🚀 Deploy
 
